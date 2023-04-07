@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2)) {
+            
+            DefaultAnimationView()
+            
+            TemplateAnimationView(title: "Toggle Opacity", transition: .opacity)
+            
+            TemplateAnimationView(title: "Toggle Move Top", transition: .move(edge: .top))
+            
+            TemplateAnimationView(title: "Toggle Move Bottom", transition: .move(edge: .bottom))
+            
+            TemplateAnimationView(title: "Toggle Move Leading", transition: .move(edge: .leading))
+            
+            TemplateAnimationView(title: "Toggle Move Trailing", transition: .move(edge: .trailing))
         }
-        .padding()
     }
 }
 

@@ -41,12 +41,16 @@ struct TemplateAnimationView: View {
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
+            .padding()
         }
+        .frame(maxWidth: .infinity, minHeight: 250)
+        .background(.gray.opacity(0.1),
+                    in: RoundedRectangle(cornerRadius: 8, style: .continuous))
     }
 }
 
 struct OpacityAnimationView_Previews: PreviewProvider {
     static var previews: some View {
-        TemplateAnimationView(title: "Opacity", transition: .opacity)
+        TemplateAnimationView(title: "Template", transition: .opacity)
     }
 }

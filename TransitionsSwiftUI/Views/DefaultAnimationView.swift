@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/*
+ 
+ DEFAULT ANIMATION
+ 
+ */
+
 struct DefaultAnimationView: View {
     
     @State private var isVisible: Bool = false
